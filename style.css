@@ -80,38 +80,115 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1024px;
   overflow: hidden;
-  border: 3px solid #fff;
 }
 
 .slider-container {
 display: flex;
-background-color: brown;
 align-items: center;
-transition: all 1s;
+transition: all .5s;
+}
+
+.img__meme {
+  border-radius: 10px;
 }
 
 .pagination-wrapper {
 display: flex;
-margin: 20px;
-align-self: flex-end;
+position: absolute;
+margin: 20px 0;
+bottom: 12px;
+right: 0;
 }
 
 .pagination__dot {
+  position: relative;
 width: 20px;
 height: 20px;
 border-radius: 50%;
-border: 1px solid red;
+border: 1px solid black;
 background-color: transparent;
 cursor: pointer;
-margin: 10px;
+margin-right: 10px;
+}
+
+.pagination__dot::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: -6px;
+  right: -7px;
+  
 }
 
 .pagination__dot:hover{
-  background-color: aqua;
+  background-color: rgb(161, 159, 159);
+}
+.pagination__dot:active{
+  background-color: rgb(29, 28, 28);
 }
 
 .active__dot {
-  background-color: aqua;
+  background-color: rgb(187, 185, 185);
+}
+
+.item-container {
+  position: relative;
+  padding-top: 30px;
+  
+}
+
+.description-container {
+  display: flex;
+  transition: .5s;
+  padding-bottom: 28px;
+
+}
+
+.title {
+font-size: 20px;
+font-weight: bold;
+color: transparent;
+opacity: 0;
+padding-left: 10px;
+}
+
+.active__txt {
+  opacity: 1;
+  color: #b4b2b2;
+  transition: 1.5s;
+}
+
+@media (max-width:768px) {
+  .item-container {
+    display: flex;
+    flex-direction: column-reverse;
+  
+    position: inherit;
+  }
+  .pagination-wrapper {
+    display: flex;
+    align-self: center;
+    position: inherit;
+    margin: 20px 0;
+    }
+
+    .item-container {
+      
+      padding-top:calc(5px + (30 - 5) * ((100vw - 320px) / (1024 - 320)));
+      
+    }
+
+    .pagination__dot {
+      width: calc(10px + (20 - 10) * ((100vw - 320px) / (1024 - 320)));
+      height: calc(10px + (20 - 10) * ((100vw - 320px) / (1024 - 320)));
+    }
+
+    .title {
+      font-size: calc(15px + (5 + 5 * 0.7) * ((100vw - 320px) / 1024));
+      }
+
 }
