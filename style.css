@@ -167,6 +167,18 @@ padding-left: 10px;
 .footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  max-width: 100rem;
+  margin: 0 auto;
+  border-top: 1px solid #262626;
+}
+
+.footer__link {
+  color: #b4b2b2;
+}
+
+.img__logo {
+  max-width: 10rem;
 }
 
 @media (max-width:768px) {
