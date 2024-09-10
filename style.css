@@ -164,6 +164,11 @@ padding-left: 10px;
   transition: 1.5s;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (max-width:768px) {
   .item-container {
     display: flex;
