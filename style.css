@@ -71,8 +71,9 @@ body {
   }
 }
 
+
 .container {
-  padding: 40px;
+  padding: 2.5rem;
 }
 
 
@@ -80,8 +81,9 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 100rem;
   overflow: hidden;
+  border-radius: 1rem;
 }
 
 .slider-container {
@@ -91,36 +93,36 @@ transition: all .5s;
 }
 
 .img__meme {
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 
 .pagination-wrapper {
 display: flex;
 position: absolute;
-margin: 20px 0;
-bottom: 12px;
+margin: 2rem 0;
+bottom: 0.75rem;
 right: 0;
 }
 
 .pagination__dot {
   position: relative;
-width: 20px;
-height: 20px;
-border-radius: 50%;
-border: 1px solid black;
-background-color: transparent;
-cursor: pointer;
-margin-right: 10px;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 1rem;
 }
 
 .pagination__dot::after {
   content: "";
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
-  top: -6px;
-  right: -7px;
+  top: -0.6rem;
+  right: -0.6rem;
   
 }
 
@@ -137,14 +139,14 @@ margin-right: 10px;
 
 .item-container {
   position: relative;
-  padding-top: 30px;
+  padding-top: 1.9rem;
   
 }
 
 .description-container {
   display: flex;
   transition: .5s;
-  padding-bottom: 28px;
+  padding-bottom: 2.2rem;
 
 }
 
@@ -173,13 +175,12 @@ padding-left: 10px;
     display: flex;
     align-self: center;
     position: inherit;
-    margin: 20px 0;
+    margin: 2rem 0;
     }
 
-    .item-container {
-      
+
+    .item-container {   
       padding-top:calc(5px + (30 - 5) * ((100vw - 320px) / (1024 - 320)));
-      
     }
 
     .pagination__dot {
